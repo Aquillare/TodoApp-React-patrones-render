@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Todo App",
+  "name": "Todo App",
   "icons": [
     {
       "src": "./journal.png",
@@ -13,7 +13,7 @@
       "sizes": "32x32"
     },
     {
-      "src": "logo512.png",
+      "src": "journal512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
