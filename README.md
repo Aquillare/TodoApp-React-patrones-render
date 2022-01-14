@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Todo App
+
+Web en la que podremos llevar una lista de tareas de a realizar.
+tendremos funciones como crear tarea, marcar tarea y eliminar tarea.
+
+Todo App ha sido desarrollada para ofrecer una excelente visualizacion
+en distintos tamaños de pantalla.
+
+Usara el local storage para mantener persitencia de datos y lograr mantener
+el estado de nuestras tareas.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

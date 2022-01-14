@@ -1,0 +1,43 @@
+.createButton_container{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+    height: auto;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    margin: 1% 6% 10px 0;
+}
+
+.CreateButton{
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: 2px solid darkviolet;
+    font-size: 28px;
+    align-self: flex-end;
+    z-index: 3;
+    transform: rotate(0);
+    transition: 450ms;
+    cursor: pointer;
+}
+.CreateButton img{
+    height: 22px;
+    width: 22px;
+    margin-top: -2px;
+}
+.CreateButton:hover{
+    transition: 450ms;
+    transform: rotate(244deg);
+    filter: brightness(1.2);
+   
+}
+.info_create{
+    color: black;
+padding: 2px;
+border: 1px solid violet;
+background: white;
+border-radius: 6px;
+align-self: flex-end;
+margin-right: 10px;
+}

@@ -1,0 +1,72 @@
+.todoForm{
+    width: 75%;
+    height: 50vh;
+    background: rgba(142, 22, 190, 0.877);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+ .form_label{
+    align-self: center;
+    justify-self: center;
+    color:white;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+
+.form_textArea{
+    width: 90%;
+    height: 30vh;
+    align-self: center;
+    justify-self: center;
+    resize: none;
+    outline:1px solid rgba(78, 252, 72, 0.918);
+    box-shadow: 0px 5px 30px black;
+    outline-offset: 2px;
+    padding: 10px;
+    color: black;
+    font-size: 18px;
+}
+.form_buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    justify-self: center;
+    width: 90%;
+    margin-bottom: 20px;
+
+}
+ 
+.cancelButton{
+   width: 40%;
+   height: 5vh;
+   cursor: pointer;
+   font-weight: bold;
+   color: rgba(11, 11, 11, 0.76);
+}
+.addButon{
+    width: 40%;
+    height: 5vh;
+    cursor: pointer;
+    background:rgba(72, 231, 66, 0.918);
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 2px solid black ;
+    color: whitesmoke;
+    font-size: 14px;
+    text-shadow: -1px 2px 3px black;
+    font-weight: bold;
+}
+.addButon:hover{
+    filter: brightness(1.2);
+}
+.addButon:active{
+    transform: scale3d(0.9,0.9,0.9);
+}
+
+@media(max-width:400px){
+    .form_textArea{
+        font-size: 15px;
+    }
+}

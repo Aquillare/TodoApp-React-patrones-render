@@ -1,0 +1,39 @@
+.todo_item-li{
+    grid-template-columns: auto 1fr auto;
+    display: grid;
+    border: 1px solid lightgray;
+    padding: 14px;
+    height: auto;
+    color: black;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 6px;
+}
+.todo_item-text{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.todo_item-text2{
+    margin-left: 10px;
+    text-decoration-line: line-through;
+}
+.todo_check img{
+    cursor:pointer;
+    height: 22px;
+    width: 22px;
+}
+.todo_delete{
+    cursor: pointer;
+}
+.todo_checkOff img{
+    filter: brightness(0.5);
+ 
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+}
+.todo_delete img{
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+}
