@@ -51,13 +51,13 @@ const AppUI = () => {
               {(!loading && !searchedTodos.length && searchValue.length < 1) && 
                 <div className='todoCreate_container'>
                   <h2>Crea tu primer Todo</h2>
-                  <img src={Journal512Green}/>
+                  <img src={Journal512Green} alt="notebook image" />
                 </div>
               }
               {(!loading && !searchedTodos.length && searchValue.length > 1) && 
                 <div className='todoSearch_noEncontrado'>
                   <h2>No encontramos el Todo</h2>
-                  <img src={Busqueda512}/>
+                  <img src={Busqueda512} alt="search image"/ >
                 </div>
               }
 
