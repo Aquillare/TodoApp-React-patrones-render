@@ -3,6 +3,8 @@
 Web en la que podremos llevar una lista de tareas de a realizar.
 tendremos funciones como crear tarea, marcar tarea y eliminar tarea.
 
+El proposito del desarrollo de este proyecto es aprender sobre patrones de render en React, compartiendo informacion ente componentes con render props, high order components y react hooks. Comprendiendo principios de diseño, composicion de componentes y colocacion del estado en react
+
 Todo App ha sido desarrollada para ofrecer una excelente visualizacion
 en distintos tamaños de pantalla.
 
