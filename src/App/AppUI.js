@@ -22,7 +22,8 @@ const AppUI = () => {
            deleteTodo,
            setOpenModal,
            openModal,
-           searchValue
+           searchValue,
+           editTodo
           } = useContext(TodoContext);
 
     return(
@@ -62,12 +63,15 @@ const AppUI = () => {
               }
 
               {searchedTodos.map(todo => (
-                <TodoItem 
+                <TodoItem
+                  id={todo.id}
                   text={todo.text}
                   completed={todo.completed}
-                  key={todo.text}
-                  onComplete={ () => toggleCompleteTodo(todo.text)}
-                  onDelete={() => deleteTodo(todo.text)}
+                  key={todo.id}
+                  onComplete={ () => toggleCompleteTodo(todo.id)}
+                  onDelete={() => deleteTodo(todo.id)}
+                  onEdit={() => editTodo(todo.id, todo.text)}
+                  onOpenModal={() => openModal.state == true ? setOpenModal({state:false}) : setOpenModal({state:true,todo:{id:todo.id,text:todo.text}})}
                 />
               ))} 
 
