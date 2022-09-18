@@ -1,5 +1,5 @@
 .todo_item-li{
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
     display: grid;
     border: 1px solid lightgray;
     padding: 14px;
@@ -21,6 +21,14 @@
     cursor:pointer;
     height: 22px;
     width: 22px;
+}
+.todo_edit{
+    cursor: pointer;
+}
+.todo_edit img{
+    height: 22px;
+    width: 22px;
+    margin-right: 8px;
 }
 .todo_delete{
     cursor: pointer;
