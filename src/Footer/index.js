@@ -4,8 +4,8 @@ const Footer = () => {
 
     return(
         <footer>
-            <a href='https://aquillare.netlify.app' target="blank">
-                <p>Miguel Aguilar 2022</p>
+            <a href='https://www.aquillare.com.ar' target="blank">
+                <p>About</p>
             </a>
             
         </footer>
