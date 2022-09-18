@@ -22,7 +22,7 @@ function TodoProvider(props){
      const completedTodos = todos.filter( todo => !!todo.completed).length //!!todo.completed es lo mismo que todo.completed == true. almacenara la cantidad de todos completados
      const totalTodos = todos.length;
 
-     const [openModal,setOpenModal] = useState(false);
+     const [openModal,setOpenModal] = useState({state:false});
    
      let searchedTodos = [];
    
@@ -48,8 +48,8 @@ function TodoProvider(props){
      //conincida con el text de alguno de los todos, al conicidir nos retornara
      //el indice (en el array) de este todo.
    
-     const toggleCompleteTodo = (text) => {
-       const todoIndex = todos.findIndex( todo => todo.text === text);
+     const toggleCompleteTodo = (id) => {
+       const todoIndex = todos.findIndex( todo => todo.id === id);
    
        //no debemos modificar el estado original de manera directa en pro del correcto funcionamiento de react,
        //por lo que creamos un nuea variable que contenga a todos los todos, luego a traves de ella modificaremos
@@ -64,18 +64,31 @@ function TodoProvider(props){
        saveItem(newTodos);
      }
 
+     //generador de ids para todos.
+     const addId = (listTodos) =>{
+      const idGenerate = (listTodos.length + 1) * Math.ceil((Math.random()*10000) * 10)
+      if(listTodos.forEach( (todo) => todo.id === idGenerate ? true : false)){
+        addId(listTodos);
+      }else{
+        return idGenerate;
+      }
+     }
+
+
+
 
      const addTodo = (text) =>{
        const newTodos = [...todos];
        newTodos.push({
+         id: addId(newTodos),
          completed : false,
          text : text
        });
        saveItem(newTodos);
      }
    
-     const deleteTodo = (text) => {
-       const todoIndex = todos.findIndex( todo => todo.text === text);
+     const deleteTodo = (id) => {
+       const todoIndex = todos.findIndex( todo => todo.id === id);
        const newTodos = [...todos];
    
        //con el metodo splice podemos eliminar elementos de un array.
@@ -84,6 +97,13 @@ function TodoProvider(props){
    
        newTodos.splice(todoIndex, 1);
        saveItem(newTodos);
+     }
+
+     const editTodo = (id, newText) => {
+      const todoIndex = todos.findIndex( todo => todo.id === id );
+      const newTodos = [...todos];
+      newTodos[todoIndex]['text'] = newText;
+      saveItem(newTodos);
      }
    
 
@@ -101,6 +121,7 @@ function TodoProvider(props){
             openModal,
             setOpenModal,
             addTodo,
+            editTodo
         }}>
             {props.children}
         </TodoContext.Provider>
