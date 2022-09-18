@@ -71,14 +71,14 @@ const AppUI = () => {
                   onComplete={ () => toggleCompleteTodo(todo.id)}
                   onDelete={() => deleteTodo(todo.id)}
                   onEdit={() => editTodo(todo.id, todo.text)}
-                  onOpenModal={() => openModal.state == true ? setOpenModal({state:false}) : setOpenModal({state:true,todo:{id:todo.id,text:todo.text}})}
+                  onOpenModal={() => openModal.state === true ? setOpenModal({state:false}) : setOpenModal({state:true, todo:{id:todo.id, text:todo.text}})}
                 />
               ))} 
 
             </TodoList>
       
     
-            {!!openModal && (    //si openModal es true, renderiza el Componente Modal
+            {!!openModal.state && (    //si openModal es true, renderiza el Componente Modal
               <Modal>
               {/*searchedTodos[0]?.text*/ <TodoForm/>}  {/*prguntamos si existe el array searchedTodos antes de usar su propiedad text*/}
               </Modal>    

@@ -16,7 +16,7 @@ const CreateTodoButton = ({setOpenModal,openModal}) => {
 
          //setOpenModal(prevState => !prevState)   /*si prevState es tru lo devolvera false y viceversa*/
 
-        !openModal ? setOpenModal({state:true}) : setOpenModal({state:false})
+        !openModal ? setOpenModal({state:false}) : setOpenModal({state:true})
 
     }
 

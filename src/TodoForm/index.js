@@ -19,7 +19,7 @@ const TodoForm = () => {
     const onSubmit = (event) => {
         event.preventDefault();
         //si openModal.todo != undefined entonces el modal ha sido abierto para actualizar un todo.
-        if(openModal.todo != undefined){
+        if(openModal.todo !== undefined){
             editTodo(openModal.todo.id, newTodoValue);
         }else{
             addTodo(newTodoValue);
@@ -30,7 +30,7 @@ const TodoForm = () => {
     return(
         <form onSubmit={onSubmit} className='todoForm '>
             <label className='form_label'>
-                {openModal.todo != undefined ? 'Actualiza el todo' : 'Crea un Todo'}
+                {openModal.todo !== undefined ? 'Actualiza el todo' : 'Crea un Todo'}
             </label>
             {/*Para nuestro formulario podriamos usar un input, pero en su lugar usaremos
               la etiqueta textarea, esto debido a que la etiqueta textarea nos permite
@@ -54,7 +54,7 @@ const TodoForm = () => {
                     CANCELAR
                 </button>
                 <button type='submit' className='addButon'>
-                    {openModal.todo != undefined ? 'Actualizar' : 'Agregar'}
+                    {openModal.todo !== undefined ? 'Actualizar' : 'Agregar'}
                 </button>
             </div>
         </form>
