@@ -4,7 +4,7 @@ import './TodoForm.css';
 
 const TodoForm = () => {
 
-    const [newTodoValue, setNewTodoValue] = React.useState('');     
+    const [newTodoValue, setNewTodoValue] = React.useState(openModal.todo?.text);     
 
     const {addTodo,setOpenModal, openModal, editTodo} = React.useContext(TodoContext);
 
@@ -39,7 +39,7 @@ const TodoForm = () => {
               cual desplaza el texto solo de manera horizontal*/}
             <textarea className='form_textArea'
                 //placeholder='Escribe tu tarea a realizar'
-                placeholder={openModal.todo?.text || 'Escribe una tarea'}
+                //placeholder={openModal.todo?.text || 'Escribe una tarea'}
                 value={newTodoValue}
                 onChange={onChange}
                 >
