@@ -4,9 +4,11 @@ const Footer = () => {
 
     return(
         <footer>
-            <a href='https://www.aquillare.com.ar' target="blank">
+           { 
+            /*<a href='https://www.aquillare.com.ar' target="blank">
                 <p>About</p>
-            </a>
+                </a> */
+            }
             
         </footer>
     )
