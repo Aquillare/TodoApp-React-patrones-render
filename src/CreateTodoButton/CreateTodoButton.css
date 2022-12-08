@@ -12,7 +12,7 @@
 .CreateButton{
     all:initial;
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     background-color: field;
     height: 36px;
