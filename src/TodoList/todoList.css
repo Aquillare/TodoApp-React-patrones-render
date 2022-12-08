@@ -7,6 +7,7 @@
     border-radius: 6px;
     overflow-y:auto;
     margin-top: 124px;
+    word-wrap: break-word; /*Corta el texto en palabras y lo muestra en varias lineas para no desbordar el contenedor*/
 }
 .todo_list-ul{
     list-style: none;

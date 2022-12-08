@@ -1,7 +1,7 @@
 .createButton_container{
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 210px;
     align-items: center;
     height: auto;
     flex-direction: row-reverse;
@@ -10,6 +10,11 @@
 }
 
 .CreateButton{
+    all:initial;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: field;
     height: 36px;
     width: 36px;
     border-radius: 50%;
@@ -33,11 +38,11 @@
    
 }
 .info_create{
-    color: black;
+color: darkviolet;
 padding: 2px;
-border: 1px solid violet;
-background: white;
+font-weight: bold;
 border-radius: 6px;
 align-self: flex-end;
 margin-right: 10px;
+cursor:default
 }

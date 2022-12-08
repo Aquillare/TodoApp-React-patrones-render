@@ -1,5 +1,5 @@
 .todo_item-li{
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: 5% 90% 5%;;
     display: grid;
     border: 1px solid lightgray;
     padding: 14px;
@@ -8,14 +8,19 @@
     margin-bottom: 10px;
     background: white;
     border-radius: 6px;
+    justify-items: center;
 }
 .todo_item-text{
     margin-left: 10px;
     margin-right: 10px;
+    max-width: 96%;
+    width: 96%;
 }
 .todo_item-text2{
     margin-left: 10px;
     text-decoration-line: line-through;
+    max-width: 96%;
+    width: 96%;
 }
 .todo_check img{
     cursor:pointer;
@@ -30,8 +35,9 @@
     width: 22px;
     margin-right: 8px;
 }
-.todo_delete{
+.todo_delete_span{
     cursor: pointer;
+    margin-bottom: 20xp;
 }
 .todo_checkOff img{
     filter: brightness(0.5);
@@ -40,8 +46,48 @@
     height: 22px;
     width: 22px;
 }
-.todo_delete img{
+.todo_delete_span img{
     cursor: pointer;
     height: 22px;
     width: 22px;
+}
+.todo_buttons_container{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.todo_action_button{
+    all: initial;
+    width: 22px;
+    height: 22px;
+    margin-bottom: 8px;
+}
+.todo_action_button:hover{
+    filter: brightness(1.2);
+}
+
+@media(max-width: 500px){
+    .todo_item-li{
+        grid-template-columns: 10% 80% 10%;;
+        display: grid;
+        border: 1px solid lightgray;
+        padding: 14px;
+        height: auto;
+        color: black;
+        margin-bottom: 10px;
+        background: white;
+        border-radius: 6px;
+    }
+    .todo_item-text{
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 90%;
+        width: 90%;
+    }
+    .todo_item-text2{
+        margin-left: 10px;
+        text-decoration-line: line-through;
+        max-width: 90%;
+        width: 90%;
+    }
 }
