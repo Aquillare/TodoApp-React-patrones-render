@@ -12,7 +12,7 @@ const TodoItem = (props) => {
     return(
         <li className='todo_item-li'>
             
-            <button className='todo_action_button'>
+            <button  type='button' className='todo_action_button'>
                 <span className={(completed && 'todo_check') || (`${!completed  && 'todo_checkOff' }` )}
                 onClick={onComplete}>
                     <img src={checkIcon} alt="check Icon"/>
@@ -24,14 +24,14 @@ const TodoItem = (props) => {
 
             <div className='todo_buttons_container'>
 
-                <button className='todo_action_button'>
+                <button type='button' className='todo_action_button'>
                     <span className='todo_delete_span'
                     onClick={onDelete}>
                         <img src={deleteIcon} alt="delete Icon"/>
                     </span>
                 </button>
 
-                <button className='todo_action_button'>
+                <button type='button' className='todo_action_button'>
                     <span className='todo_edit'
                     onClick={onOpenModal}>
                         <img src={editIcon} alt="edit Icon"/>

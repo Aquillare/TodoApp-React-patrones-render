@@ -22,10 +22,10 @@ const CreateTodoButton = ({setOpenModal,openModal}) => {
 
     return(
         <div className='createButton_container'>
-        <button className='CreateButton'
-         onClick={onClickButton}>
-            <img src={plusIcon} alt="plus Icon"/>
-        </button>
+            <button type='button' className='CreateButton'
+            onClick={onClickButton}>
+                <img src={plusIcon} alt="plus Icon"/>
+            </button>
 
         {(!loading && !searchedTodos.length) && <p className='info_create'>Crea el primer todo</p>} 
         </div>
