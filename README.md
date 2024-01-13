@@ -8,7 +8,7 @@ El proposito del desarrollo de este proyecto es aprender sobre patrones de rende
 Todo App ha sido desarrollada para ofrecer una excelente visualizacion
 en distintos tamaños de pantalla.
 
-Usara el local storage para mantener persitencia de datos y lograr mantener
+Usara el local storage para lograr persitencia de datos y así mantener
 el estado de nuestras tareas.
 
 ## Getting Started with Create React App
